@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title
+      | WeatherAggregator
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    - if current_user
+      h2 = current_user.username
+      = link_to 'Sign out', sessions_path, method: :delete, data: { confirm: 'Are you sure?' }
+    - else
+      => link_to 'Sign In', new_session_path
+      = link_to 'Sign up', new_registration_path
+
+    = yield
