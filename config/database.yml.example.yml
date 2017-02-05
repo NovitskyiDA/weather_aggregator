@@ -8,8 +8,12 @@ default: &default
 
 development:
   <<: *default
-  database: weather_aggregator
+  database: weather_aggregator_dev
 
 test:
   <<: *default
-  database: weather_aggregator
+  database: weather_aggregator_test
+
+production:
+  <<: *default
+  database: weather_aggregator_prod
