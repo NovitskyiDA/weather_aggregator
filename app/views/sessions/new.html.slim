@@ -1,4 +1,8 @@
+h3 Sign in
+
 = simple_form_for(:session, url: sessions_path) do |f|
   = f.input :username
   = f.input :password
+  = link_to 'Reset password', new_password_reset_path
+  = f.input :remember_me, as: :boolean
   = f.submit 'Sign in'
