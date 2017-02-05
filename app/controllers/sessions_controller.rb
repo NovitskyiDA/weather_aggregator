@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   def create
     if user && user.authenticate(session_params[:password])
-      session[:auth_token] = user.auth_token
+      cookies_auth_token(session_params[:remember_me])
       redirect_to root_path
     else
       render 'new'
@@ -9,8 +9,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.delete :auth_token
-    reset_session
+    cookies.delete(:auth_token)
     redirect_to root_path
   end
 
@@ -21,6 +20,14 @@ class SessionsController < ApplicationController
   end
 
   def session_params
-    params.require(:session).permit(:username, :password)
+    params.require(:session).permit(:username, :password, :remember_me)
+  end
+
+  def cookies_auth_token(remember_me)
+    if remember_me
+      cookies.permanent[:auth_token] = user.auth_token
+    else
+      cookies[:auth_token] = user.auth_token
+    end
   end
 end

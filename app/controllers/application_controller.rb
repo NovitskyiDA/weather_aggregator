@@ -10,10 +10,10 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticated?
-    session[:auth_token] && current_user
+    cookies[:auth_token] && current_user
   end
 
   def current_user
-    @current_user ||= User.find_by(auth_token: session[:auth_token]) if session[:auth_token]
+    @current_user ||= User.find_by(auth_token: cookies[:auth_token]) if cookies[:auth_token]
   end
 end

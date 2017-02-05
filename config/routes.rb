@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :sessions, only: %i(new create) do
     delete :destroy, on: :collection
   end
+  resources :password_resets, except: %i(index destroy)
 end
