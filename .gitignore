@@ -12,6 +12,7 @@
 !/log/.keep
 /tmp
 /config/database.yml
+/config/local_env.yml
 
 /spec/examples.txt
 /coverage

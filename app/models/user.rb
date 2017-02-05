@@ -5,6 +5,8 @@ class User < ApplicationRecord
   has_secure_password
   has_secure_token :auth_token
 
+  before_create :confirmation_token
+
   validates :username, presence: true,
                        uniqueness: { case_sensitive: false },
                        format: { with: User::USERNAME_REGEX }
@@ -19,5 +21,17 @@ class User < ApplicationRecord
     self.password_reset_sent_at = Time.zone.now
     save!
     UserMailer.password_reset(self).deliver
+  end
+
+  def email_activate
+    self.email_confirmed = true
+    self.confirm_token = nil
+    save!
+  end
+
+  private
+
+  def confirmation_token
+    self.confirm_token = SecureRandom.urlsafe_base64 if confirm_token.blank?
   end
 end
