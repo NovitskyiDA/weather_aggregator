@@ -95,5 +95,5 @@ Rails.application.configure do
     password: ENV['GMAIL_PASSWORD']
   }
 
-  config.action_mailer.default_url_options = { host: 'weather-aggregator.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'ruby-demon.me' }
 end
