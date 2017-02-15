@@ -1,6 +1,8 @@
 require 'factory_girl_rails'
 require 'simplecov'
+require 'capybara/rspec'
 require 'database_cleaner'
+
 SimpleCov.start 'rails'
 
 RSpec.configure do |config|

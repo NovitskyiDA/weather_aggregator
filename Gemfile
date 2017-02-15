@@ -32,6 +32,7 @@ group :test do
 end
 
 group :development, :test do
+  gem 'capybara'
   gem 'factory_girl_rails'
   gem 'ffaker', '~> 2.4'
   gem 'pry-rails'
