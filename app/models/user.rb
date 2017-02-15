@@ -23,6 +23,10 @@ class User < ApplicationRecord
     UserMailer.password_reset(self).deliver
   end
 
+  def send_email_confirmation
+    UserMailer.registration_confirmation(self).deliver
+  end
+
   def email_activate
     self.email_confirmed = true
     self.confirm_token = nil

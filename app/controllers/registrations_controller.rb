@@ -6,7 +6,7 @@ class RegistrationsController < ApplicationController
   def create
     @user ||= User.new(user_params)
     if @user.valid? && @user.save
-      UserMailer.registration_confirmation(@user).deliver
+      @user.send_email_confirmation
       redirect_to root_url, notice: 'Please confirm your email address to continue'
     else
       render 'new'
