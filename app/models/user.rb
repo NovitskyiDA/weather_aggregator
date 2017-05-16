@@ -5,6 +5,8 @@ class User < ApplicationRecord
   has_secure_password
   has_secure_token :auth_token
 
+  has_and_belongs_to_many :locations
+
   before_create :confirmation_token
 
   validates :username, presence: true,

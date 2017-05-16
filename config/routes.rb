@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   end
 
   resources :password_resets, except: %i(index destroy)
+
+  resources :locations, except: %i(new edit)
 end
