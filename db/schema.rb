@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170205174254) do
+ActiveRecord::Schema.define(version: 20170515084559) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "locations", force: :cascade do |t|
+    t.string "country"
+    t.string "city"
+  end
+
+  create_table "locations_users", id: false, force: :cascade do |t|
+    t.integer "user_id",     null: false
+    t.integer "location_id", null: false
+    t.index ["user_id", "location_id"], name: "index_locations_users_on_user_id_and_location_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
