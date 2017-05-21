@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170515084559) do
+ActiveRecord::Schema.define(version: 20170520160916) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20170515084559) do
   create_table "locations", force: :cascade do |t|
     t.string "country"
     t.string "city"
+    t.string "country_code"
   end
 
   create_table "locations_users", id: false, force: :cascade do |t|
@@ -37,6 +38,19 @@ ActiveRecord::Schema.define(version: 20170515084559) do
     t.datetime "password_reset_sent_at"
     t.boolean  "email_confirmed",        default: false
     t.string   "confirm_token"
+  end
+
+  create_table "weather_informations", force: :cascade do |t|
+    t.integer "location_id"
+    t.string  "description"
+    t.string  "icon"
+    t.integer "current_temp"
+    t.integer "temp_max"
+    t.integer "temp_min"
+    t.integer "humidity"
+    t.integer "pressure"
+    t.decimal "wind_speed"
+    t.integer "wind_degree"
   end
 
 end

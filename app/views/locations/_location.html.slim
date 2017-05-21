@@ -1,1 +1,6 @@
-p #{location.city} #{location.country}
+p #{location.city} #{location.country} #{location.country_code}
+
+.weather-info data-id="#{location.weather_information.id}"
+  = render 'weather_informations/weather_information', weather_information: location.weather_information
+
+= link_to 'Update', weather_information_path(location.weather_information), method: :put, remote: true

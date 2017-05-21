@@ -7,4 +7,5 @@ input.location-field#autocomplete placeholder='Enter location' type='text' data-
 
 = simple_form_for :location, remote: true do |f|
   = f.hidden_field :country, id: 'location_country'
+  = f.hidden_field :country_code, id: 'location_country_code'
   = f.hidden_field :city, id: 'location_city'

@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_secure_password
   has_secure_token :auth_token
 
-  has_and_belongs_to_many :locations
+  has_and_belongs_to_many :locations, dependent: :destroy
 
   before_create :confirmation_token
 
