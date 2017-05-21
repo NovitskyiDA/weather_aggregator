@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20170521155526) do
     t.string "country"
     t.string "city"
     t.string "country_code"
-    t.string "image"
+    t.string "images",       array: true
   end
 
   create_table "locations_users", id: false, force: :cascade do |t|

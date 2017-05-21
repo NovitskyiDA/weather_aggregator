@@ -10,6 +10,6 @@ class Location < ApplicationRecord
   private
 
   def add_location_image
-    self.image = GoogleCustomSearchApi.search(city, searchType: 'image').items[rand(0..10)].link
+    self.images = GoogleCustomSearchApi.search(city, searchType: 'image').items.map(&:link)
   end
 end

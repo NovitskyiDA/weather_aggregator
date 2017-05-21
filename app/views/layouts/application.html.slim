@@ -9,6 +9,11 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   body
+    .wrapper
+      - if notice
+        javascript:
+          $.notify( { message: "#{notice}" }, { type: 'notification' } )
+
     - if current_user
       h2 = current_user.username
       = link_to 'Sign out', sessions_path, method: :delete, data: { confirm: 'Are you sure?' }
