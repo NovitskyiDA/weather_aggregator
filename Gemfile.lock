@@ -77,10 +77,15 @@ GEM
     ffi (1.9.17)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    google_custom_search_api (2.0.0)
+      addressable
+      httparty
     has_secure_token (1.0.0)
       activerecord (>= 3.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
+    httparty (0.15.5)
+      multi_xml (>= 0.5.2)
     i18n (0.8.0)
     jbuilder (2.6.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -104,6 +109,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
+    multi_xml (0.6.0)
     netrc (0.11.0)
     nio4r (1.2.1)
     nokogiri (1.7.0.1)
@@ -250,6 +256,7 @@ DEPENDENCIES
   database_cleaner
   factory_girl_rails
   ffaker (~> 2.4)
+  google_custom_search_api
   has_secure_token
   jbuilder (~> 2.5)
   jquery-rails

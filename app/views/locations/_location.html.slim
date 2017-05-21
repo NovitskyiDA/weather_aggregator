@@ -1,4 +1,5 @@
 .location-block data-location-id="#{location.id}"
+  p = image_tag(location.image)
   p #{location.city} #{location.country} #{location.country_code}
 
   .weather-info data-weather-id="#{location.weather_information.id}"
