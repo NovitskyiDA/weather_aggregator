@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'coffee-rails', '~> 4.2'
+gem 'google_custom_search_api'
 gem 'has_secure_token'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
