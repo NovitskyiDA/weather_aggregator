@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :password_resets, except: %i(index destroy)
 
-  resources :locations, except: %i(new edit)
+  resources :locations, only: %i(index create destroy)
 
-  resources :weather_informations, only: :update
+  resources :weather_informations, only: %i(show update)
 end

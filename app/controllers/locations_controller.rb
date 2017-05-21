@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
   before_action :authenticate!
-  before_action :location, only: :create
+  before_action :location, only: %i(create destroy)
 
   def index
     @locations = current_user.locations.includes(:weather_information)
@@ -20,6 +20,10 @@ class LocationsController < ApplicationController
     ).find_or_create_weather_information
   end
 
+  def destroy
+    current_user.locations.delete(location) if current_user.locations.include?(location)
+  end
+
   private
 
   def location_params
@@ -31,6 +35,10 @@ class LocationsController < ApplicationController
   end
 
   def location
-    @location ||= Location.find_by(location_params)
+    @location ||= Location.find_by(location_id || location_params)
+  end
+
+  def location_id
+    params[:id] ? { id: params[:id] } : false
   end
 end
