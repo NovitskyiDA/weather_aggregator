@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   private
 
   def authenticate!
-    redirect_to new_session_path unless authenticated?
+    redirect_to new_session_path, notice: 'Please, sign in to your account.' unless authenticated?
   end
 
   def authenticated?

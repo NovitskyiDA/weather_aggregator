@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(session_params[:password])
       check_email_confirmation
     else
+      flash[:notice] = 'Email or password isn\'t correct'
       render 'new'
     end
   end
@@ -35,7 +36,7 @@ class SessionsController < ApplicationController
       cookies_auth_token(session_params[:remember_me])
       redirect_to root_path
     else
-      flash.now[:error] = 'Please activate your account'
+      flash.now[:notice] = 'Please activate your account'
       render 'new'
     end
   end

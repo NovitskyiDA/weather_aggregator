@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # a b c d e f g h i j k l m n o p q r s t u v w x y z
 
 gem 'bcrypt', '~> 3.1.7'
+gem 'bootstrap-growl-rails'
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'coffee-rails', '~> 4.2'
 gem 'google_custom_search_api'
 gem 'has_secure_token'
@@ -20,6 +22,7 @@ gem 'slim'
 gem 'turbolinks', '~> 5'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'uglifier', '>= 1.3.0'
+gem 'whenever', require: false
 
 group :development do
   gem 'listen', '~> 3.0.5'
