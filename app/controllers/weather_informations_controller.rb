@@ -1,6 +1,13 @@
 class WeatherInformationsController < ApplicationController
   before_action :authenticate!
 
+  def show
+    @forecasts = ForecastPresenter.collection(WeathersService.new(
+      location: location,
+      days: params[:days]
+    ).forecast_info)
+  end
+
   def update
     @weather_information = WeathersService.new(
       location: location
@@ -10,6 +17,6 @@ class WeatherInformationsController < ApplicationController
   private
 
   def location
-    WeatherInformation.find(params[:id]).location
+    @location ||= Location.joins(:weather_information).find_by!(weather_informations: { id: params[:id] })
   end
 end

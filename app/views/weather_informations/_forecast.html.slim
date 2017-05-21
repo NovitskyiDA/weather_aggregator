@@ -1,0 +1,23 @@
+ul
+  li
+    = image_tag("weather_icons/#{forecast.icon}.png")
+  li
+    = forecast.date
+  li
+    = forecast.description
+  li
+    = forecast.day_temp
+  li
+    = forecast.night_temp
+  li
+    = forecast.max_temp
+  li
+    = forecast.min_temp
+  li
+    = forecast.wind_speed
+  li
+    = forecast.wind_degree
+  li
+    = forecast.humidity
+  li
+    = forecast.pressure

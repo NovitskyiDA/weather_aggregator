@@ -19,5 +19,8 @@ module WeatherAggregator
         end
       end
     end
+
+    config.enable_dependency_loading = true
+    config.autoload_paths << Rails.root.join('lib')
   end
 end

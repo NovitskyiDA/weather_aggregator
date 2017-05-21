@@ -1,6 +1,12 @@
-p #{location.city} #{location.country} #{location.country_code}
+.location-block data-location-id="#{location.id}"
+  p #{location.city} #{location.country} #{location.country_code}
 
-.weather-info data-id="#{location.weather_information.id}"
-  = render 'weather_informations/weather_information', weather_information: location.weather_information
+  .weather-info data-weather-id="#{location.weather_information.id}"
+    = render 'weather_informations/weather_information', weather_information: location.weather_information
 
-= link_to 'Update', weather_information_path(location.weather_information), method: :put, remote: true
+  => link_to 'Update', weather_information_path(location.weather_information), method: :put, remote: true
+  p
+    - (5..15).step(5) do |days|
+      => link_to "#{days} days forecast", weather_information_path(location.weather_information.id, days: days)
+
+  p = link_to 'Delete location', location_path(location.id), method: :delete, data: { confirm: "Are you sure?" }, remote: true
