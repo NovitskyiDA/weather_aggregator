@@ -11,6 +11,7 @@ class CreateWeatherInformations < ActiveRecord::Migration[5.0]
       t.integer :pressure
       t.decimal :wind_speed
       t.integer :wind_degree
+      t.timestamps
     end
   end
 end

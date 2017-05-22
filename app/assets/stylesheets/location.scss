@@ -1,0 +1,137 @@
+$main-color: rgba(255, 255, 255, 0.71);
+
+.locations-block {
+  text-align: center;
+  display: block;
+  width: 100%;
+
+  .location-block {
+    margin: 10px;
+    display: inline-block;
+    width: 48%;
+    border: 3px solid $main-color;
+    border-radius: 10px;
+    padding: 1%;
+    background: rgba(black, 0.67);
+
+    .location-top-info, .location-bottom-info {
+      display: inline-block;
+      font-size: 2em;
+      color: $main-color;
+      width: 100%;
+    }
+
+    .location-top-info {
+      border-bottom: 3px solid $main-color;
+
+      .location-title {
+        float: left;
+        display: inline-block;
+      }
+
+      .location-buttons {
+        display: inline-block;
+        float: right;
+
+        a {
+          margin-left: 15px;
+          color: $main-color;
+        }
+      }
+    }
+
+    .location-bottom-info {
+      padding-top: 17px;
+      font-size: 1.6em;
+      text-align: center;
+      border-top: 3px solid $main-color;
+
+      .forecast-buttons a {
+        padding: 5px;
+        margin: 0 10px;
+        color: $main-color;
+        transition: .3s;
+        border: 2px solid $main-color;
+        border-radius: 5px;
+
+        &:hover {
+          color: grey;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .location-main {
+      display: flex;
+      align-items: center;
+
+      .weather-info, .location-image {
+        width: 50%;
+        display: inline-block;
+      }
+
+      .location-image img {
+        max-height: 200px;
+        width: 100%;
+        border-radius: 5%;
+      }
+
+      .weather-info-wrapper {
+        display: block;
+        width: 100%;
+
+        .weather-icon {
+          display: inline-block;
+          text-align: center;
+          width: 55%;
+        }
+
+        .weather-main {
+          padding-right: 15px;
+          display: inline-block;
+          vertical-align: middle;
+          width: 45%;
+          color: $main-color;
+          font-size: 1.9em;
+        }
+      }
+
+      .weather-additional-info {
+        padding-top: 10px;
+        margin-bottom: 10px;
+        height: 80px;
+        display: block;
+        text-align: center;
+        width: 100%;
+
+        .humidity, .pressure, .wind-speed, .wind-degree {
+          display: inline-block;
+          width: 23%;
+          color: $main-color;
+          font-size: 1.5em;
+
+          img {
+            width: 100%;
+            padding: 0 25%;
+          }
+        }
+
+        @for $i from 1 through 360 {
+          .wind-degree-#{$i} img {
+            transform: rotate(#{$i}deg);
+          }
+        }
+      }
+
+      .weather-updated-info {
+        width: 100%;
+        display: block;
+        text-align: center;
+        color: $main-color;
+        font-style: italic;
+        font-size: 1em;
+        padding: 2px;
+      }
+    }
+  }
+}

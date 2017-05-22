@@ -1,13 +1,18 @@
 .location-block data-location-id="#{location.id}"
-  p = image_tag(location.images[rand(1..9)])
-  p #{location.city} #{location.country} #{location.country_code}
-
-  .weather-info data-weather-id="#{location.weather_information.id}"
-    = render 'weather_informations/weather_information', weather_information: location.weather_information
-
-  => link_to 'Update', weather_information_path(location.weather_information), method: :put, remote: true
-  p
-    - (5..15).step(5) do |days|
-      => link_to "#{days} days forecast", weather_information_path(location.weather_information.id, days: days)
-
-  p = link_to 'Delete location', location_path(location.id), method: :delete, data: { confirm: "Are you sure?" }, remote: true
+  .location-top-info
+    .location-title
+      = "#{location.city}, #{location.country}"
+    .location-buttons
+      => link_to weather_information_path(location.weather_information), method: :put, remote: true do
+        .fa.fa-refresh aria-hidden="true"
+      => link_to location_path(location.id), method: :delete, data: { confirm: "Are you sure?" }, remote: true do
+        .fa.fa-trash aria-hidden="true"
+  .location-main
+    .weather-info data-weather-id="#{location.weather_information.id}"
+      = render 'weather_informations/weather_information', weather_information: location.weather_information
+    .location-image
+      = image_tag(location.images[rand(1..9)])
+  .location-bottom-info
+    span.forecast-buttons
+      - (5..15).step(5) do |days|
+        => link_to "#{days} days forecast", weather_information_path(location.weather_information.id, days: days)

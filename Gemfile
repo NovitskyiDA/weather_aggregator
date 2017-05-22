@@ -5,7 +5,8 @@ source 'https://rubygems.org'
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-growl-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails'
+gem 'font-awesome-rails'
 gem 'google_custom_search_api'
 gem 'has_secure_token'
 gem 'jbuilder', '~> 2.5'
@@ -20,7 +21,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'simple_form'
 gem 'slim'
 gem 'turbolinks', '~> 5'
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'uglifier', '>= 1.3.0'
 gem 'whenever', require: false
 

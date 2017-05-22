@@ -1,0 +1,66 @@
+$main-color: rgba(255, 255, 255, 0.71);
+
+.forecasts-block {
+  margin-top: 300px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: $main-color;
+
+  .forecasts-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 75px;
+  }
+
+  .forecast-wrapper {
+    display: inline-block;
+    width: 20%;
+    background: rgba(0, 72, 128, 0.29);
+    border: 1px solid $main-color;
+    height: 370px;
+    position: relative;
+
+    .date {
+      top: -1px;
+      right: -1px;
+      position: absolute;
+      width: 88px;
+      border: 1px solid $main-color;
+      border-bottom-left-radius: 10px;
+    }
+
+    .description {
+      margin-top: 60px;
+      margin-bottom: 15px;
+      font-size: 1.7em;
+    }
+
+    .icon img {
+      height: 110px;
+    }
+
+    .temp {
+      font-size: 2.7em;
+      font-weight: 500;
+    }
+
+    .info {
+      margin-top: 20px;
+
+      .night-temp, .max-temp {
+        display: inline-block;
+        width: 20%;
+        font-size: 1.2em;
+      }
+
+      .temperature {
+        display: inline-block;
+        width: 40%;
+
+        img {
+          width: 40px;
+        }
+      }
+    }
+  }
+}

@@ -42,16 +42,18 @@ ActiveRecord::Schema.define(version: 20170521155526) do
   end
 
   create_table "weather_informations", force: :cascade do |t|
-    t.integer "location_id"
-    t.string  "description"
-    t.string  "icon"
-    t.integer "current_temp"
-    t.integer "temp_max"
-    t.integer "temp_min"
-    t.integer "humidity"
-    t.integer "pressure"
-    t.decimal "wind_speed"
-    t.integer "wind_degree"
+    t.integer  "location_id"
+    t.string   "description"
+    t.string   "icon"
+    t.integer  "current_temp"
+    t.integer  "temp_max"
+    t.integer  "temp_min"
+    t.integer  "humidity"
+    t.integer  "pressure"
+    t.decimal  "wind_speed"
+    t.integer  "wind_degree"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end

@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
   before_action :authenticate!
-  before_action :location, only: %i(create destroy)
+  before_action :location, only: %i[create destroy]
 
   def index
     @locations = current_user.locations.includes(:weather_information)

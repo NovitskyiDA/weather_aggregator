@@ -13,4 +13,4 @@ initAutocomplete = ->
     $('[data-location-input]').val('')
 
 $(document).on 'turbolinks:load', ->
-  initAutocomplete()
+  initAutocomplete() if $('[data-location-input]').length > 0

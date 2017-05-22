@@ -1,3 +1,6 @@
-h2 = "Forecast for #{@location.city}, #{@location.country}"
 
-= render partial: 'forecast', collection: @forecasts
+.forecasts-block
+  .forecasts-title
+    = "#{@forecasts.length}-days forecast for #{@location.city}, #{@location.country}"
+
+  = render partial: 'forecast', collection: @forecasts
