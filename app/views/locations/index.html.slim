@@ -1,6 +1,6 @@
-h1 Locations index
-
-input.location-field#autocomplete placeholder='Enter location' type='text' data-location-input=''
+.search-location
+  span.fa.fa-search
+  input.location-field#autocomplete placeholder='Enter location' type='text' data-location-input=''
 
 = simple_form_for :location, remote: true do |f|
   = f.hidden_field :country, id: 'location_country'

@@ -1,5 +1,6 @@
-h3 Reset Password
-= simple_form_for @user, url: password_reset_path(params[:id]) do |f|
-  = f.input :password
-  = f.input :password_confirmation
-  = f.submit 'Update password'
+.form
+  h1 Reset Password
+  = simple_form_for @user, url: password_reset_path(params[:id]) do |f|
+    = f.input :password
+    = f.input :password_confirmation
+    = f.submit 'Update password', class: 'submit-button'

@@ -1,23 +1,16 @@
-ul
-  li
-    = image_tag("weather_icons/#{forecast.icon}.png")
-  li
+.forecast-wrapper
+  .date
     = forecast.date
-  li
+  .description
     = forecast.description
-  li
-    = forecast.day_temp
-  li
-    = forecast.night_temp
-  li
-    = forecast.max_temp
-  li
-    = forecast.min_temp
-  li
-    = forecast.wind_speed
-  li
-    = forecast.wind_degree
-  li
-    = forecast.humidity
-  li
-    = forecast.pressure
+  .icon
+    = image_tag("weather_icons/#{forecast.icon}.png")
+  .temp
+    = "#{forecast.day_temp} ° C"
+  .info
+    .night-temp
+      = "Night #{forecast.night_temp}°C"
+    .temperature
+      = image_tag('weather_icons/temperature.png')
+    .max-temp
+      = "Max #{forecast.max_temp}°C"

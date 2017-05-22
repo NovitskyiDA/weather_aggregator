@@ -1,0 +1,14 @@
+header
+  = image_tag('logo.png')
+nav
+  .pages
+    = link_to 'Home', root_path, class: current_class?(root_path)
+    = link_to 'Locations', locations_path, class: current_class?(locations_path) if current_user
+    = link_to 'About', contacts_path, class: current_class?(contacts_path)
+  .user-menu
+    - if current_user
+      span.username => current_user.username
+      = link_to 'Sign out', sessions_path, method: :delete, data: { confirm: 'Are you sure?' }
+    - else
+      => link_to 'Sign In', new_session_path
+      = link_to 'Sign up', new_registration_path

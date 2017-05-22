@@ -1,5 +1,5 @@
 class PasswordResetsController < ApplicationController
-  before_action :user, only: %i(edit update)
+  before_action :user, only: %i[edit update]
 
   def create
     @user = User.find_by(email: params[:password_reset][:email])

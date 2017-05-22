@@ -1,9 +1,20 @@
-p = image_tag("weather_icons/#{weather_information.icon}.png")
-p = weather_information.description
-p = weather_information.current_temp
-p = weather_information.temp_max
-p = weather_information.temp_min
-p = weather_information.humidity
-p = weather_information.pressure
-p = weather_information.wind_speed
-p = weather_information.wind_degree
+.weather-info-wrapper
+  .weather-icon = image_tag("weather_icons/#{weather_information.icon}.png")
+  .weather-main
+    .description = weather_information.description
+    .current-temp = "#{weather_information.current_temp} ° C"
+.weather-additional-info
+  .humidity
+    = image_tag('weather_icons/humidity.png')
+    span= "#{weather_information.humidity}%"
+  .pressure
+    = image_tag('weather_icons/pressure.png')
+    span= weather_information.pressure
+  .wind-speed
+    = image_tag('weather_icons/wind.png')
+    span= weather_information.wind_speed
+  div class="wind-degree wind-degree-#{weather_information.wind_degree}"
+    = image_tag('weather_icons/arrow.png')
+    span= "#{weather_information.wind_degree}°"
+.weather-updated-info
+  = "Was updated #{time_ago_in_words(weather_information.updated_at)} ago"

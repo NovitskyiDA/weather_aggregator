@@ -1,3 +1,19 @@
-.location-field {
-  width: 50%;
+.search-location {
+  text-align: center;
+  margin-top: 240px;
+  margin-bottom: 160px;
+  position: relative;
+
+  .fa.fa-search {
+    position: absolute;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.31);
+    font-size: 17px;
+    top: 10px;
+    right: 36%;
+  }
+
+  .location-field {
+    width: 30%;
+  }
 }

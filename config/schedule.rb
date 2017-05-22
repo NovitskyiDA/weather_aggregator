@@ -1,3 +1,5 @@
+set :environment, 'production'
+
 every :hour do
-  runner 'WeatherInformation.global_update'
+  rake 'weather_informations global_update'
 end

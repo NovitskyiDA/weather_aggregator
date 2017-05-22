@@ -8,7 +8,7 @@ class ForecastPresenter
   end
 
   def date
-    Time.at(object['dt']).strftime('%v').tr('-', ' ')
+    Time.at(object['dt']).strftime('%b %d %A')
   end
 
   def day_temp
@@ -23,32 +23,12 @@ class ForecastPresenter
     object['temp']['max'].round
   end
 
-  def min_temp
-    object['temp']['min'].round
-  end
-
   def description
     object['weather'][0]['main']
   end
 
   def icon
     object['weather'][0]['icon']
-  end
-
-  def wind_speed
-    object['speed']
-  end
-
-  def wind_degree
-    object['deg']
-  end
-
-  def humidity
-    object['humidity']
-  end
-
-  def pressure
-    object['pressure'].round
   end
 
   private
