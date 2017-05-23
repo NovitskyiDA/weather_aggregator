@@ -1,6 +1,3 @@
-![][Imgur](http://i.imgur.com/wevdAX1.png)
-
-----------
 **WEATHER AGGREGATOR**
 -------------
 
@@ -8,6 +5,6 @@ Weather Aggregator is a website with simple navigation for displaying weather of
 
 ----------
 
-***Staging:*** [weather-aggregator.herokuapp.com](https://weather-aggregator.herokuapp.com/)
+[weather-aggregator.herokuapp.com](https://weather-aggregator.herokuapp.com/)
 
-***Production:*** [ruby-demon.me](http://ruby-demon.me/)
+[ruby-demon.me](http://ruby-demon.me/)
