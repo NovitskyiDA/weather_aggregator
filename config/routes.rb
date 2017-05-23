@@ -18,5 +18,5 @@ Rails.application.routes.draw do
 
   resources :weather_informations, only: %i[show update]
 
-  resources :contacts, only: :index
+  resources :contacts, only: %i[new create]
 end

@@ -8,7 +8,7 @@ class LocationsController < ApplicationController
 
   def create
     if location && current_user.locations.include?(location)
-      head :ok
+      render :create
     elsif location
       current_user.locations << location
     else

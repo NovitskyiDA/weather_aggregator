@@ -1,1 +1,7 @@
-$('.locations-block').prepend("<%= j render @weather_information.location %>");
+<% if @weather_information %>
+  $('.locations-block').prepend("<%= j render @weather_information.location %>");
+<% else %>
+  $.notify('You have already added this location', 'success');
+<% end %>
+
+$('.abc').spin(false);

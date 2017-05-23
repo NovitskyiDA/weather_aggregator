@@ -22,5 +22,7 @@ module WeatherAggregator
 
     config.enable_dependency_loading = true
     config.autoload_paths << Rails.root.join('lib')
+
+    config.active_job.queue_adapter = :delayed_job
   end
 end

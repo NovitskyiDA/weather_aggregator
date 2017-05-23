@@ -38,13 +38,13 @@ class WeathersService < BaseService
   def weather_params(openweathermap, apixu)
     { description: openweathermap['weather'][0]['main'],
       icon: openweathermap['weather'][0]['icon'],
-      current_temp: average([openweathermap['main']['temp'], apixu['current']['temp_c']]),
+      current_temp: average([openweathermap['main']['temp'], apixu.fetch('current', {}).fetch('temp_c', nil)]),
       temp_max: openweathermap['main']['temp_max'].round,
       temp_min: openweathermap['main']['temp_min'].round,
-      humidity: average([openweathermap['main']['humidity'], apixu['current']['humidity']]),
-      pressure: average([openweathermap['main']['pressure'], apixu['current']['pressure_mb']]),
+      humidity: average([openweathermap['main']['humidity'], apixu.fetch('current', {}).fetch('humidity', nil)]),
+      pressure: average([openweathermap['main']['pressure'], apixu.fetch('current', {}).fetch('pressure_mb', nil)]),
       wind_speed: openweathermap['wind']['speed'],
-      wind_degree: average([openweathermap['wind']['deg'], apixu['current']['wind_degree']]) }
+      wind_degree: average([openweathermap['wind']['deg'], apixu.fetch('current', {}).fetch('wind_degree', nil)]) }
   end
 
   def openweathermap_info
@@ -57,10 +57,12 @@ class WeathersService < BaseService
 
   def apixu_info
     Apixu::Client.new.current(location.city)
+  rescue
+    {}
   end
 
   def average(array)
-    (array.reduce(:+) / array.length).round
+    array.compact.any? ? (array.compact.reduce(:+) / array.length).round : 0
   end
 
   def openweathermap_request_params

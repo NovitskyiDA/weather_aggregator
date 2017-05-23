@@ -2,6 +2,8 @@
   span.fa.fa-search
   input.location-field#autocomplete placeholder='Enter location' type='text' data-location-input=''
 
+.abc
+
 = simple_form_for :location, remote: true do |f|
   = f.hidden_field :country, id: 'location_country'
   = f.hidden_field :country_code, id: 'location_country_code'

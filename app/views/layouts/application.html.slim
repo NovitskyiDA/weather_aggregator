@@ -13,7 +13,7 @@ html
     .wrapper
       - if notice
         javascript:
-          $.notify( { message: "#{notice}" }, { type: 'notification' } )
+          $.notify("#{notice}", 'success')
 
     = render 'shared/nav_bar'
 

@@ -22,11 +22,11 @@ class User < ApplicationRecord
     self.password_reset_token = SecureRandom.urlsafe_base64
     self.password_reset_sent_at = Time.zone.now
     save!
-    UserMailer.password_reset(self).deliver
+    SendResetPasswordMailJob.set(wait: 10.seconds).perform_later(self)
   end
 
   def send_email_confirmation
-    UserMailer.registration_confirmation(self).deliver
+    SendMailJob.set(wait: 10.seconds).perform_later(self)
   end
 
   def email_activate

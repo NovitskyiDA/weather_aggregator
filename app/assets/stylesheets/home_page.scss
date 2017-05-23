@@ -1,0 +1,50 @@
+.home-page-container {
+  color: rgba(197, 221, 224, 0.97);
+  margin-top: 240px;
+  letter-spacing: 2px;
+
+  .title {
+    color: rgba(255, 255, 0, 0.49);
+    text-align: center;
+    font-size: 3.5em;
+  }
+
+  .home-page-info {
+    text-align: center;
+    font-size: 1.4em;
+    padding: 0 55px;
+
+    p {
+      padding-bottom: 5px;
+    }
+  }
+
+  .features-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    .feature-title {
+      text-align: center;
+      padding: 7px;
+      font-size: 2.3em;
+    }
+
+    .feature {
+      display: inline-block;
+      width: 33%;
+
+      .description {
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+        font-size: 1.5em;
+      }
+
+      .image img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+}
