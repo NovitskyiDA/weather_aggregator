@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # a b c d e f g h i j k l m n o p q r s t u v w x y z
 
+gem 'activeadmin'
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-growl-rails'
 gem 'bootstrap-sass', '~> 3.3.6'

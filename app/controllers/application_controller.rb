@@ -22,4 +22,12 @@ class ApplicationController < ActionController::Base
   def set_locale
     I18n.locale = session[:locale] || I18n.default_locale
   end
+
+  def authenticate_admin!
+    redirect_to root_path, notice: I18n.t('.notice.admin_error') unless admin?
+  end
+
+  def admin?
+    current_user && current_user.admin
+  end
 end

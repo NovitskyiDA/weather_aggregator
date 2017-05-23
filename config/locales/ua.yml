@@ -50,7 +50,23 @@ ua:
       sign_in: Вхiд
       sign_out: Вихід
       sign_up: Зареєструватися
-      confirm: 'Ви впевненi?'
+      confirm: Ви впевненi?
+  notice:
+    weather_updated: Інформацію про погоду оновлено
+    location_added: Ви вже додали дану локацію
+    confirm_email: Ми відправили Вам листа на електронну пошту для підтвердження
+    success_email_confirm: Аккаунт підтверджено. Тепер Ви можете увійти в систему
+    user_not_found: Користувача не знайдено
+    successfully_contacted: Дякую за ваше повідомлення. Скоро ми Вам відповімо
+    incorrect_credentials: Невірна пошта або пароль
+    activate_account_error: Будь-ласка, спочатку активуйте Ваш аккаунт
+    authenticate: Спочатку зареєструйтесь або ввійдіть в систему
+    password_reset:
+      message: Ми відправили Вам листа на пошту для відновлення пароля
+      error: Користувач з таким імейлом не існує
+      expired: Ви вичерпали час на відновлення паролю. Спробуйте знову
+      success: Ви змінили свій пароль
+    admin_error: Ви не маєте доступу до цієї сторінки
   datetime:
     distance_in_words:
       about_x_hours:
