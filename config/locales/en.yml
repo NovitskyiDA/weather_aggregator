@@ -66,3 +66,4 @@ en:
       error: User with this email does not exist
       expired: Password reset has expired
       success: Password has been reset
+    admin_error: You don't have permissions to visit this page
