@@ -1,5 +1,5 @@
 .form
-  h1 Reset password
+  h1 = t('.title')
   = simple_form_for(:password_reset, url: password_resets_path) do |f|
     = f.input :email
-    = f.submit 'Reset password', class: 'submit-button'
+    = f.submit t('.title'), class: 'submit-button'

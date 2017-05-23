@@ -1,0 +1,11 @@
+ua:
+  simple_form:
+    labels:
+      defaults:
+        username: Логiн
+        email: Електронна адреса
+        password: Пароль
+        password_confirmation: Повторiть пароль
+        remember_me: "Запам'ятати мене"
+        name: "Iм'я"
+        message: Повiдомлення

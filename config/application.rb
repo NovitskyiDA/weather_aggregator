@@ -24,5 +24,8 @@ module WeatherAggregator
     config.autoload_paths << Rails.root.join('lib')
 
     config.active_job.queue_adapter = :delayed_job
+
+    config.i18n.available_locales = %i[en ua]
+    config.i18n.default_locale = :en
   end
 end

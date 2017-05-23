@@ -17,4 +17,4 @@
     = image_tag('weather_icons/arrow.png')
     span= "#{weather_information.wind_degree}°"
 .weather-updated-info
-  = "Was updated #{time_ago_in_words(weather_information.updated_at)} ago"
+  = "#{t('.updated')} #{time_ago_in_words(weather_information.updated_at)} #{t('.ago')}"

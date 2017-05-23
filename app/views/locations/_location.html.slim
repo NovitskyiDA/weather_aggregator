@@ -15,4 +15,4 @@
   .location-bottom-info
     span.forecast-buttons
       - (5..15).step(5) do |days|
-        => link_to "#{days} days forecast", weather_information_path(location.weather_information.id, days: days)
+        => link_to "#{days} #{t('.forecast.button')}", weather_information_path(location.weather_information.id, days: days)

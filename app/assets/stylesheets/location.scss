@@ -47,8 +47,8 @@ $main-color: rgba(255, 255, 255, 0.71);
       border-top: 3px solid $main-color;
 
       .forecast-buttons a {
+        width: 33%;
         padding: 5px;
-        margin: 0 10px;
         color: $main-color;
         transition: .3s;
         border: 2px solid $main-color;

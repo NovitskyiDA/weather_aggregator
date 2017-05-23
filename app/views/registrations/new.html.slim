@@ -1,8 +1,8 @@
 .form
-  h1 Sign up
+  h1 = t('.title')
   = simple_form_for @user, url: registrations_path do |f|
     = f.input :username
     = f.input :email
     = f.input :password
     = f.input :password_confirmation
-    = f.submit 'Sign up', class: 'submit-button'
+    = f.submit t('.title'), class: 'submit-button'

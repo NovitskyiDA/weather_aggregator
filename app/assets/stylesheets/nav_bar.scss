@@ -6,9 +6,22 @@ header{
   width: 100%;
   top: 0;
   z-index: 100;
+  position: relative;
 
-  img {
+  .main-logo img {
     width: 15%;
+  }
+
+  .locales-icons {
+    position: absolute;
+    top: 0;
+    left: 5px;
+
+    img {
+      margin-left: 5px;
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 

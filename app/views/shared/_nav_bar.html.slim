@@ -1,14 +1,18 @@
 header
-  = image_tag('logo.png')
+  .main-logo
+    = image_tag('logo.png')
+  .locales-icons
+    => link_to_unless current_locale?(:en), image_tag('locales/en.png'), locale_path(:en), method: :patch
+    = link_to_unless current_locale?(:ua), image_tag('locales/ua.png'), locale_path(:ua), method: :patch
 nav
   .pages
-    = link_to 'Home', root_path, class: current_class?(root_path)
-    = link_to 'Locations', locations_path, class: current_class?(locations_path) if current_user
-    = link_to 'Contacts', new_contact_path, class: current_class?(new_contact_path)
+    = link_to t('.home'), root_path, class: current_class?(root_path)
+    = link_to t('.locations'), locations_path, class: current_class?(locations_path) if current_user
+    = link_to t('.contact'), new_contact_path, class: current_class?(new_contact_path)
   .user-menu
     - if current_user
       span.username => current_user.username
-      = link_to 'Sign out', sessions_path, method: :delete, data: { confirm: 'Are you sure?' }
+      = link_to t('.sign_out'), sessions_path, method: :delete, data: { confirm: t('.confirm') }
     - else
-      => link_to 'Sign In', new_session_path
-      = link_to 'Sign up', new_registration_path
+      = link_to t('.sign_in'), new_session_path, class: current_class?(new_session_path)
+      = link_to t('.sign_up'), new_registration_path, class: current_class?(new_registration_path)
