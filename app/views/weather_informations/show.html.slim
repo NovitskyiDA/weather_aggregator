@@ -1,6 +1,6 @@
 
 .forecasts-block
   .forecasts-title
-    = "#{@forecasts.length}-days forecast for #{@location.city}, #{@location.country}"
+    = "#{@forecasts.length} #{t('.title')} #{@location.city}, #{@location.country}"
 
   = render partial: 'forecast', collection: @forecasts

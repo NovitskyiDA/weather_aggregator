@@ -1,0 +1,124 @@
+ua:
+  dashboard:
+    index:
+      title: Агрегатор погодних умов
+      first_description: Сайти прогнозування погоди надають важливу послугу для своїх користувачiв, повідомляючи їм про майбутні погоднi умови i прогнози.
+      second_description: Aгрегатор погодних умов є ідеальною безкоштовною альтернативою, яка допомагає побудувати свою власну панель для зручного перегляду інформації про погоду.
+      third_description: Наш сервіс - це веб-сайт з простою навігацією для відображення погоди i прогнозiв для ваших улюблених місць.
+      features:
+        title: Переваги
+        locations: Легко знайти будь-яку локацiю
+        images:  Динамiчний набiр картинок для кожної локацiї
+        icons: Iнформативно зрозумілі позначки
+  locations:
+    index:
+      input_placeholder: Введiть локацiю
+    location:
+      forecast:
+        button: денний прогноз
+  weather_informations:
+    weather_information:
+      updated: Було обновлено
+      ago: тому
+    show:
+      title: денний прогноз погоди для
+    forecast:
+      night: Нiч
+      max: Макс.
+  contacts:
+    new:
+      title: Написати нам
+      button: Вiдправити
+  password_resets:
+    new:
+      title: Reset password
+    edit:
+      title: Новий пароль
+      button: Оновити пароль
+  sessions:
+    new:
+      title: Вхiд
+      reset_password: Новий пароль
+  registrations:
+    new:
+      title: Зареєструватися
+  shared:
+    nav_bar:
+      home: Головна
+      locations: Локацiї
+      contact: Контакти
+      sign_in: Вхiд
+      sign_out: Вихід
+      sign_up: Зареєструватися
+      confirm: 'Ви впевненi?'
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        few: близько %{count} години
+        many: близько %{count} годин
+        one: близько %{count} година
+        other: близько %{count} години
+      about_x_months:
+        few: близько %{count} місяців
+        many: близько %{count} місяців
+        one: близько %{count} місяця
+        other: близько %{count} місяця
+      about_x_years:
+        few: близько %{count} років
+        many: близько %{count} років
+        one: близько %{count} року
+        other: близько %{count} року
+      almost_x_years:
+        few: майже %{count} років
+        many: майже %{count} років
+        one: майже %{count} роки
+        other: майже %{count} років
+      half_a_minute: півхвилини
+      less_than_x_minutes:
+        few: менше %{count} хвилин
+        many: менше %{count} хвилин
+        one: менше %{count} хвилини
+        other: менше %{count} хвилини
+      less_than_x_seconds:
+        few: менше %{count} секунд
+        many: менше %{count} секунд
+        one: менше %{count} секунди
+        other: менше %{count} секунди
+      over_x_years:
+        few: більше %{count} років
+        many: більше %{count} років
+        one: більше %{count} року
+        other: більше %{count} року
+      x_days:
+        few: "%{count} дні"
+        many: "%{count} днів"
+        one: "%{count} день"
+        other: "%{count} дня"
+      x_minutes:
+        few: "%{count} хвилини"
+        many: "%{count} хвилин"
+        one: "%{count} хвилина"
+        other: "%{count} хвилини"
+      x_months:
+        few: "%{count} місяці"
+        many: "%{count} місяців"
+        one: "%{count} місяць"
+        other: "%{count} місяця"
+      x_years:
+        few: "%{count} років"
+        many: "%{count} років"
+        one: "%{count} рік"
+        other: "%{count} року"
+      x_seconds:
+        few: "%{count} секунди"
+        many: "%{count} секунд"
+        one: "%{count} секунда"
+        other: "%{count} секунди"
+    prompts:
+      day: День
+      hour: Година
+      minute: Хвилина
+      month: Місяць
+      second: Секунда
+      year: Рік
+

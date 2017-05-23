@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   resources :weather_informations, only: %i[show update]
 
   resources :contacts, only: %i[new create]
+
+  resources :locales, only: :update, constraints: { id: /(en|ua)/ }
 end

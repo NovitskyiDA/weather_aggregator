@@ -9,8 +9,8 @@
     = "#{forecast.day_temp} ° C"
   .info
     .night-temp
-      = "Night #{forecast.night_temp}°C"
+      = "#{t('.night')} #{forecast.night_temp}°C"
     .temperature
       = image_tag('weather_icons/temperature.png')
     .max-temp
-      = "Max #{forecast.max_temp}°C"
+      = "#{t('.max')} #{forecast.max_temp}°C"

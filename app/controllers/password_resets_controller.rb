@@ -5,17 +5,17 @@ class PasswordResetsController < ApplicationController
     @user = User.find_by(email: params[:password_reset][:email])
     if @user
       @user.send_password_reset
-      redirect_to root_path, notice: 'Check your email to reset password'
+      redirect_to root_path, notice: I18n.t('notice.password_reset.message')
     else
-      redirect_to root_path, notice: 'User with this email doesn\'t exist'
+      redirect_to root_path, notice: I18n.t('notice.password_reset.error')
     end
   end
 
   def update
     if user && user.password_reset_sent_at < 2.hours.ago
-      redirect_to new_password_reset_path, notice: 'Password reset has expired'
+      redirect_to new_password_reset_path, notice: I18n.t('notice.password_reset.expired')
     elsif user && user.update(user_params)
-      redirect_to root_path, notice: 'Password has been reset'
+      redirect_to root_path, notice: I18n.t('notice.password_reset.success')
     else
       render 'edit'
     end

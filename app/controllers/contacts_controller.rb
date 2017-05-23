@@ -3,9 +3,9 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     @contact.request = request
     if @contact.deliver
-      redirect_to root_path, notice: 'Thank you for your message. We will contact you soon!'
+      redirect_to root_path, notice: I18n.t('notice.successfully_contacted')
     else
-      render :new, notice: 'Cannot send message'
+      render :new
     end
   end
 

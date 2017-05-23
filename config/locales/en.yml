@@ -1,23 +1,68 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  dashboard:
+    index:
+      title: WEATHER AGGREGATOR
+      first_description: Weather forecasting sites provide an important service for their users, informing them of upcoming weather conditions and forecasts.
+      second_description: Weather Aggregator is perfect free alternative that helps build you own private dashboard for сonvenient viewing of weather information.
+      third_description: Our service is a website with simple navigation for displaying weather and forecasts for your favourite locations.
+      features:
+        title: Features
+        locations: Easy to find any location
+        images: Different images for location
+        icons: Perfect informative icons
+  locations:
+    index:
+      input_placeholder: Enter location
+    location:
+      forecast:
+        button: days forecast
+  weather_informations:
+    weather_information:
+      updated: Was updated
+      ago: ago
+    show:
+      title: -days forecast for
+    forecast:
+      night: Night
+      max: Max
+  contacts:
+    new:
+      title: Contact us
+      button: Send message
+  password_resets:
+    new:
+      title: Reset password
+    edit:
+      title: Reset password
+      button: Update password
+  sessions:
+    new:
+      title: Sign in
+      reset_password: Reset password
+  registrations:
+    new:
+      title: Sign up
+  shared:
+    nav_bar:
+      home: Home
+      locations: Locations
+      contact: Contact
+      sign_in: Sign In
+      sign_out: Sign Out
+      sign_up: Sign Up
+      confirm: Are you sure?
+  notice:
+    weather_updated: Weather information updated
+    location_added: You have already added this location
+    confirm_email: Please confirm your email address to continue
+    success_email_confirm: Your email has been confirmed
+    user_not_found: User does not exist
+    successfully_contacted: Thank you for your message. We will contact you soon!
+    incorrect_credentials: Email or password is not correct
+    activate_account_error: Please activate your account
+    authenticate: Please, sign in to your account
+    password_reset:
+      message: Check your email to reset password
+      error: User with this email does not exist
+      expired: Password reset has expired
+      success: Password has been reset

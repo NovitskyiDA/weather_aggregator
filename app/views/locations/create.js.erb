@@ -1,7 +1,7 @@
 <% if @weather_information %>
   $('.locations-block').prepend("<%= j render @weather_information.location %>");
 <% else %>
-  $.notify('You have already added this location', 'success');
+  $.notify("<%= I18n.t('notice.location_added') %>", 'success');
 <% end %>
 
 $('.abc').spin(false);
