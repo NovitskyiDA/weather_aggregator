@@ -1,1 +1,2 @@
 $(".weather-info[data-weather-id='" + <%= @weather_information.id %> + "']").html("<%= j render @weather_information %>");
+$.notify('Weather information updated', 'success');

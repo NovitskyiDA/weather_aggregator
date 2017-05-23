@@ -11,6 +11,7 @@ initAutocomplete = ->
     form.find('#location_country_code').val country_code
     form.submit()
     $('[data-location-input]').val('')
+    $('.abc').spin('large', 'white')
 
 $(document).on 'turbolinks:load', ->
   initAutocomplete() if $('[data-location-input]').length > 0

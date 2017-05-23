@@ -4,9 +4,11 @@
 @import 'font-awesome';
 @import 'location_autocomplete';
 @import 'nav_bar';
-@import 'signin-signup';
+@import 'signin_signup';
 @import 'location';
 @import 'forecast';
+@import 'home_page';
+@import 'contact';
 
 .main {
   background: image-url('main_background.jpg') no-repeat;
@@ -23,4 +25,8 @@
     width: 100%;
     height: auto;
   }
+}
+
+.abc .spinner {
+  top: 330px !important;
 }

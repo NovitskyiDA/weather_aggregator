@@ -1,0 +1,9 @@
+.contact-form
+  .title
+    p Contact us
+  .form
+    = simple_form_for :contact, url: contacts_path do |f|
+      = f.input :name, required: true
+      = f.input :email, required: true
+      = f.input :message, as: :text, required: true
+      = f.button :submit, 'Send message', class: 'contact-button'
