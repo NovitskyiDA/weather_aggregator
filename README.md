@@ -1,24 +1,13 @@
-# README
+![][Imgur](http://i.imgur.com/wevdAX1.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+----------
+**WEATHER AGGREGATOR**
+-------------
 
-Things you may want to cover:
+Weather Aggregator is a website with simple navigation for displaying weather of your favourite locations and making forecasts.
 
-* Ruby version
+----------
 
-* System dependencies
+***Staging:*** [weather-aggregator.herokuapp.com](https://weather-aggregator.herokuapp.com/)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+***Production:*** [ruby-demon.me](http://ruby-demon.me/)
