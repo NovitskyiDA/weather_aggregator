@@ -9,6 +9,7 @@
 @import 'forecast';
 @import 'home_page';
 @import 'contact';
+@import 'responsive';
 
 .main {
   background: image-url('main_background.jpg') no-repeat;
@@ -25,10 +26,6 @@
     width: 100%;
     height: auto;
   }
-}
-
-.abc .spinner {
-  top: 330px !important;
 }
 
 .animated {
