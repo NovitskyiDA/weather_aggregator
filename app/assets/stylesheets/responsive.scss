@@ -1,0 +1,146 @@
+@media (max-width: 960px) {
+  header .locales-icons img {
+    width: 20px;
+    height: 20px;
+  }
+
+  nav {
+    .pages {
+      display: block;
+      text-align: center;
+      margin-left: 0;
+
+      a {
+        padding: 10px;
+        width: 33.3%;
+      }
+    }
+
+    .user-menu {
+      display: block;
+      float: none;
+      margin-right: 0;
+      text-align: center;
+
+      a {
+        width: 45%;
+        padding: 10px;
+      }
+
+      .username {
+        display: inline-block;
+        width: 45%;
+      }
+    }
+  }
+
+  .home-page-container {
+    margin-top: 150px;
+
+    .title {
+      font-size: 2.8em;
+    }
+
+    .home-page-info {
+      padding: 0 10px;
+    }
+
+    .features-block .feature {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .search-location {
+    margin-top: 150px;
+    margin-bottom: 60px;
+
+    .fa.fa-search {
+      right: 30px;
+    }
+
+    .location-field {
+      width: 90%;
+    }
+  }
+
+  .locations-block {
+    .location-block {
+      margin: 0;
+      display: block;
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 15px;
+
+      .location-top-info {
+        font-size: 1.3em;
+
+        .location-title {
+          width: 75%;
+        }
+
+        .location-buttons {
+          width: 25%;
+        }
+      }
+
+      .location-main {
+        display: block;
+
+        .weather-info, .location-image {
+          width: 100%;
+          display: block;
+        }
+
+        .location-image {
+          margin-bottom: 5px;
+        }
+      }
+
+      .location-bottom-info {
+        font-size: 1.3em;
+        padding-top: 5px;
+
+        .forecast-buttons a {
+          display: block;
+          margin: 5px auto;
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  .forecasts-block {
+    margin-top: 160px;
+
+    .forecasts-title {
+      margin-bottom: 30px;
+    }
+
+    .forecast-wrapper {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .form {
+    top: 350px;
+  }
+
+  .contact-form {
+    margin-top: 170px;
+
+    .form {
+      top: 400px;
+    }
+  }
+
+  .abc .spinner {
+    top: 225px !important;
+  }
+
+  body .animated {
+    right: 15px !important;
+    background: rgb(75, 71, 68);
+  }
+}
