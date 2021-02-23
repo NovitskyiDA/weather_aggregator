@@ -8,5 +8,3 @@ It's my Bachelor Diploma Project.
 ----------
 
 [weather-aggregator.herokuapp.com](https://weather-aggregator.herokuapp.com/)
-
-[ruby-demon.me](http://ruby-demon.me/)
